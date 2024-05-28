@@ -3,45 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Mi Portafolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Home Section */
+#home {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About Section */
+#about {
+    background-color: #f9f9f9;
+}
+
+#about h2, #projects h2, #resume h2, #contact h2 {
+    margin-bottom: 1rem;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #fff;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-item {
+    background-color: #f4f4f4;
+    margin: 1rem;
+    padding: 1rem;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.project-item p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+/* Resume Section */
+#resume {
+    background-color: #f9f9f9;
+}
+
+.resume-item {
+    margin-bottom: 2rem;
+}
+
+.resume-item h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.resume-item p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+/* Contact Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    margin-top: 1rem;
+    color: #333;
+}
+
+#contact input, #contact textarea {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact button {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .project-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+}
+
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Mi Página Web</h1>
+        <h1>Mi Nombre</h1>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#resume">Currículum</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Esta es la sección de inicio de mi página web. Aquí puedes encontrar información general.</p>
-        </section>
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <p>En esta sección hablo sobre mí. Aquí puedes encontrar detalles sobre mi experiencia y habilidades.</p>
-        </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a través del siguiente formulario.</p>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+    <section id="home">
+        <h2>Bienvenido a Mi Portafolio</h2>
+        <p>Descripción breve sobre ti y tu trabajo.</p>
+    </section>
+    <section id="about">
+        <h2>Sobre Mí</h2>
+        <p>Biografía y experiencia profesional.</p>
+    </section>
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <p>Descripción de proyectos destacados.</p>
+    </section>
+    <section id="resume">
+        <h2>Currículum</h2>
+        <p>Experiencia laboral, educación y habilidades.</p>
+    </section>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
     <footer>
-        <p>&copy; 2024 Mi Página Web</p>
+        <p>&copy; 2024 Mi Nombre</p>
     </footer>
 </body>
 </html>
